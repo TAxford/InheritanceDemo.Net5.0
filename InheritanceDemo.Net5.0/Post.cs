@@ -49,5 +49,11 @@ namespace InheritanceDemo.Net5._0
             this.IsPublic = isPublic;
         }
 
+        //virtual method overide
+        public override string ToString()
+        {
+            return String.Format("{0} - {1} - by {2}", this.ID, this.Title, this.SendByUserName);
+        }
+
     }
 }
