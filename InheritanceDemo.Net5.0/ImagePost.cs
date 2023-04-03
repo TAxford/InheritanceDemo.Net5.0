@@ -27,5 +27,11 @@ namespace InheritanceDemo.Net5._0
             this.ImageURL = imageURL;
         }
 
+        //virtual method overide
+        public override string ToString()
+        {
+            return String.Format("{0} - {1} - {2} - by {3}", this.ID, this.Title, this.ImageURL, this.SendByUserName);
+        }
+
     }
 }
