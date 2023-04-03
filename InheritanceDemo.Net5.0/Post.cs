@@ -27,5 +27,14 @@ namespace InheritanceDemo.Net5._0
             SendByUserName = "Timothy Axford";
         }
 
+        //Instance constructor that has three parameters
+        public Post(string title, bool isPublic, string sendByUserName)
+        {
+            this.ID= 0;
+            this.Title = title;
+            this.SendByUserName= sendByUserName;
+            this.IsPublic = isPublic;
+        }
+
     }
 }
