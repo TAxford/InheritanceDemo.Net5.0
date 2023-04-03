@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
 
 namespace InheritanceDemo.Net5._0
 {
@@ -14,7 +12,6 @@ namespace InheritanceDemo.Net5._0
         protected bool isPlaying = false;
         protected int currDuration = 0;
         Timer timer;
-
         //property
         protected string VideoURL { get; set; }
         protected int Length { get; set; }
