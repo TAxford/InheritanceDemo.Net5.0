@@ -6,7 +6,10 @@ namespace InheritanceDemo.Net5._0
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Object of Post class
+            Post post1= new Post("Thanks for the birthday wished", true, "Timothy Axford");
+            Console.WriteLine(post1.ToString());
+            Console.ReadLine();
         }
     }
 }
