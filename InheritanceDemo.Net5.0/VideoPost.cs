@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace InheritanceDemo.Net5._0
 {
@@ -38,8 +39,11 @@ namespace InheritanceDemo.Net5._0
         //Additional Methods
         public void Play()
         {
-            Console.WriteLine("Playing");
-            timer = new Timer(TimerCallback, null, 0, 1000);
+            if (!isPlaying)
+            {
+                Console.WriteLine("Playing");
+                timer = new Timer(TimerCallback, null, 0, 1000);
+            }            
             
         }        
 
@@ -59,9 +63,13 @@ namespace InheritanceDemo.Net5._0
 
         public void Stop()
         {
-            Console.WriteLine("Stopped at {0}", currDuration);
-            currDuration= 0;
-            tiemr.Dispose();
+            if(isPlaying)
+            {
+                Console.WriteLine("Stopped at {0}", currDuration);
+                currDuration = 0;
+                timer.Dispose();
+            }
+            
         }
 
         //To.String Method
