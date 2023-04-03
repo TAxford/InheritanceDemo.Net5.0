@@ -11,7 +11,11 @@ namespace InheritanceDemo.Net5._0
         //variable
         private static int currentPostId;
 
-
+        //properties
+        protected int ID { get; set; }
+        protected string Title { get; set; }
+        protected string SendByUserName { get; set; }
+        protected bool IsPublic { get; set; }
 
 
     }
