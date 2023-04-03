@@ -30,10 +30,16 @@ namespace InheritanceDemo.Net5._0
         //Instance constructor that has three parameters
         public Post(string title, bool isPublic, string sendByUserName)
         {
-            this.ID= 0;
+            this.ID= GetNextID();
             this.Title = title;
             this.SendByUserName= sendByUserName;
             this.IsPublic = isPublic;
+        }
+
+        //method
+        protected int GetNextID()
+        {
+            return ++currentPostId;
         }
 
     }
