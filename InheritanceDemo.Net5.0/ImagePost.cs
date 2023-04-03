@@ -22,6 +22,7 @@ namespace InheritanceDemo.Net5._0
             this.Title = title;
             this.SendByUserName= sendByUsername;
             this.IsPublic= isPublic;
+
             //Property ImageURL is a member of the ImagePost, but not of Post.
             this.ImageURL = imageURL;
         }
