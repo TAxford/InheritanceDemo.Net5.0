@@ -17,6 +17,15 @@ namespace InheritanceDemo.Net5._0
         protected string SendByUserName { get; set; }
         protected bool IsPublic { get; set; }
 
+        //Default constructor. If a derived class does not invoke a base-class constructor explicitly
+        //the default constructor is called implicitly.
+        public Post() 
+        {
+            ID = 0;
+            Title = "My First Post";
+            IsPublic = true;
+            SendByUserName = "Timothy Axford";
+        }
 
     }
 }
