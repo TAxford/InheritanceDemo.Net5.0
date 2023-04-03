@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace InheritanceDemo.Net5._0
@@ -10,7 +11,8 @@ namespace InheritanceDemo.Net5._0
     {
         //member fields
         protected bool isPlaying = false;
-        protected int currDuration = 0; 
+        protected int currDuration = 0;
+        Timer timer;
 
         //property
         protected string VideoURL { get; set; }
@@ -31,6 +33,35 @@ namespace InheritanceDemo.Net5._0
             //Property ImageURL is a member of the ImagePost, but not of Post.
             this.VideoURL = videoURL;
             this.Length = length;
+        }
+
+        //Additional Methods
+        public void Play()
+        {
+            Console.WriteLine("Playing");
+            timer = new Timer(TimerCallback, null, 0, 1000);
+            
+        }        
+
+        private void TimerCallback(object o) 
+        {
+            if(currDuration < Length)
+            {
+                currDuration++;
+                Console.WriteLine("Video at {0}s", currDuration);
+                GC.Collect();
+            }
+            else
+            {
+                Stop();
+            }
+        }
+
+        public void Stop()
+        {
+            Console.WriteLine("Stopped at {0}", currDuration);
+            currDuration= 0;
+            tiemr.Dispose();
         }
 
         //To.String Method
