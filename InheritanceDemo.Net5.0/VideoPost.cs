@@ -31,7 +31,8 @@ namespace InheritanceDemo.Net5._0
         //To.String Method
         public override string ToString()
         {
-            return String.Format("{0} - {1} - {2} - by {3}", this.ID, this.Title, this.VideoURL, this.SendByUserName);
+            return String.Format("{0} - {1} - {2} - {3} by {4}",
+                this.ID, this.Title, this.VideoURL, this.Length, this.SendByUserName);
         }
     }
 }
