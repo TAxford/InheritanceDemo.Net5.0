@@ -8,9 +8,14 @@ namespace InheritanceDemo.Net5._0
 {
     internal class VideoPost : Post
     {
+        //member fields
+        protected bool isPlaying = false;
+        protected int currDuration = 0; 
+
         //property
         protected string VideoURL { get; set; }
         protected int Length { get; set; }
+
 
         //constructor
         public VideoPost() { }
