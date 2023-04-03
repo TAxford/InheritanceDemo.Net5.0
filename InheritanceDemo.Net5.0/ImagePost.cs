@@ -10,7 +10,7 @@ namespace InheritanceDemo.Net5._0
     internal class ImagePost : Post
     {
         //property
-        public string ImageURL { get; set; }
+        protected string ImageURL { get; set; }
 
         //constructor
         public ImagePost() { }
@@ -23,7 +23,7 @@ namespace InheritanceDemo.Net5._0
             this.SendByUserName= sendByUsername;
             this.IsPublic= isPublic;
 
-            //Property ImageURL is a member of the ImagePost, but not of Post.
+            //Property ImageURL is a member of the VideoPost, but not of Post.
             this.ImageURL = imageURL;
         }
 

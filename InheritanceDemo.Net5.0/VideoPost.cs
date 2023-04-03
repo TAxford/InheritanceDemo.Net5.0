@@ -9,13 +9,13 @@ namespace InheritanceDemo.Net5._0
     internal class VideoPost : Post
     {
         //property
-        public string VideoURL { get; set; }
-        public int Length { get; set; }
+        protected string VideoURL { get; set; }
+        protected int Length { get; set; }
 
         //constructor
         public VideoPost() { }
 
-        public VideoPost(string title, string sendByUsername, string videoURL, int length, bool isPublic)
+        public VideoPost(string title, string sendByUsername, string videoURL, bool isPublic, int length)
         {
             //The following properties and the GetNextID method are inherited from Post.
             this.ID = GetNextID();
@@ -26,6 +26,12 @@ namespace InheritanceDemo.Net5._0
             //Property ImageURL is a member of the ImagePost, but not of Post.
             this.VideoURL = videoURL;
             this.Length = length;
+        }
+
+        //To.String Method
+        public override string ToString()
+        {
+            return String.Format("{0} - {1} - {2} - by {3}", this.ID, this.Title, this.VideoURL, this.SendByUserName);
         }
     }
 }
