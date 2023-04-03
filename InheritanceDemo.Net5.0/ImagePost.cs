@@ -17,7 +17,13 @@ namespace InheritanceDemo.Net5._0
 
         public ImagePost(string title, string sendByUsername, string imageURL, bool isPublic)
         {
+            //The following properties and the GetNextID method are inherited from Post.
             this.ID = GetNextID();
+            this.Title = title;
+            this.SendByUserName= sendByUsername;
+            this.IsPublic= isPublic;
+            //Property ImageURL is a member of the ImagePost, but not of Post.
+            this.ImageURL = imageURL;
         }
 
     }
