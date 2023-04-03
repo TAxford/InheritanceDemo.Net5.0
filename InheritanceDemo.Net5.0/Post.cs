@@ -42,5 +42,12 @@ namespace InheritanceDemo.Net5._0
             return ++currentPostId;
         }
 
+        //method to update
+        public void Update(string title, bool isPublic)
+        {
+            this.Title = title;
+            this.IsPublic = isPublic;
+        }
+
     }
 }
